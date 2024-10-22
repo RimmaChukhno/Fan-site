@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-image: url('images/background-image.png');
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+header,
+footer {
+  width: 100%;
+  background-color: black;
+  font-family: Agdasima, sans-serif;
+  padding: 20px 20px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  font-size: 22px;
+  color: white;
+}
+.nav-menu li {
+  padding-right: 20px;
+  position: relative;
+}
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.2s;
+}
+.nav-menu a:hover {
+  background-color: rgb(64, 59, 59);
+  border-radius: 10px;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  list-style-type: none;
+  padding: 5px;
+  margin: 0;
+  font-size: 22px;
+  width: 180px;
+  border-radius: 5px;
+}
+.dropdown-menu li {
+  border-bottom: 1px solid #555;
+}
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px;
+}
+.nav-menu li:hover .dropdown-menu {
+  display: block;
+}
+.connect-menu {
+  position: relative;
+  display: inline-block;
+}
+.connect-button {
+  background-color: transparent;
+  color: white;
+  font-size: 22px;
+  font-family: Agdasima;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+}
+.dropdown-connect-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  font-size: 18px;
+  background-color: #333;
+  list-style-type: none;
+  border-radius: 5px;
+}
+.dropdown-connect-menu li {
+  padding: 10px;
+  display: inline-block;
+}
+.dropdown-connect-menu li:not(:last-child) {
+  border-right: 1px solid #555;
+  margin-right: 10px;
+}
+.dropdown-connect-menu a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.connect-menu:hover .dropdown-connect-menu {
+  display: flex;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.social-networks {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.social-networks-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.social-network-button {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.social-network-button img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.rights-reserved {
+  color: white;
+  text-align: center;
+}

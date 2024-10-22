@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/*??????*/
+section {
+    margin: 100px 50px 10px 100px;
+    padding: 20px;
+}
+
+/* Style du header */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style des sections */
+section {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Titres des sections */
+h2 {
+    color: #000000;
+    text-align: center;
+
+}
+
+/* Style du footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #007bff;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+
+.p {
+    text-align: center;
+}
+
+.mosaic {
+    padding: 20px;
+    text-align: center;
+}
+
+.mosaic h2 {
+    margin-bottom: 20px;
+}
+
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.mosaic-item {
+    margin: 10px;
+    overflow: hidden;
+    /* Cache les débordements lors de l'agrandissement */
+}
+
+.mosaic-item img {
+    width: 100%;
+    /* S'assure que l'image remplit le conteneur */
+    height: 100%;
+    /* Ajuste la hauteur pour remplir le conteneur */
+    object-fit: cover;
+    /* Maintient le ratio d'aspect tout en remplissant le conteneur */
+    border-radius: 8px;
+    /* Arrondit les coins de l'image */
+    transition: transform 0.3s;
+    /* Animation douce */
+}
+
+.mosaic-item:hover img {
+    transform: scale(1.1);
+    /* Agrandit l'image à 110% lors du survol */
+}
+
+
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 300px;
+    /* Ширина слайдера */
+    height: 200px;
+    /* Высота слайдера */
+    border-radius: 10px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300%;
+    /* Ширина для трех слайдов */
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide:nth-child(1) {
+    background-image: url('images/image1.jpeg');
+}
+
+.slide:nth-child(2) {
+    background-image: url('images/image2.jpg');
+}
+
+.slide:nth-child(3) {
+    background-image: url('images/image3.jpg');
+}
+
+.slider:hover .slides {
+    transform: translateX(-100%);
+}
+
+.slider:hover .slides:hover {
+    transform: translateX(-200%);
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 300px;
+    /* Ширина карусели */
+    height: 200px;
+    /* Высота карусели */
+    border-radius: 10px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300%;
+    /* Ширина для трех слайдов */
+}
+
+.slide {
+    min-width: 100%;
+    /* Каждое изображение занимает 100% ширины карусели */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide:nth-child(1) {
+    background-image: url('images/image1.jpeg');
+}
+
+.slide:nth-child(2) {
+    background-image: url('images/image2.jpg');
+}
+
+.slide:nth-child(3) {
+    background-image: url('images/image3.jpg');
+}
+
+.carousel:hover .slides {
+    animation: slide 9s infinite;
+    /* Запуск анимации при наведении */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-100%);
+    }
+
+    66% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*brouillonbrouillonbrouillonbrouillonbrouillonbrouillonbrouillonbrouillon*/

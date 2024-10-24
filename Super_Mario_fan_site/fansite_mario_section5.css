@@ -210,7 +210,7 @@ header {
 .news-header {
   font-size: 44px;
   color: black;
-  text-align: left;
+  text-align: center;
 }
 .news-content-wrapper {
   display: flex;
@@ -389,7 +389,7 @@ input[type="radio"]:checked + label {
 /* Section Personnages contenant une gallerie mosaique d'images et une description */
 .characters-section {
   width: 60%;
-  min-height: 80vw; /* Ensure the section has a minimum height */
+  min-height: 50vw; /* Ensure the section has a minimum height */
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -397,7 +397,6 @@ input[type="radio"]:checked + label {
   align-items: center;
   padding: 20px;
   gap: 20px;
-  margin: 40px auto;
   overflow: visible; /* Prevent overflow */
 }
 
@@ -466,10 +465,66 @@ input[type="radio"]:checked + label {
   outline: 2px solid blue; /* Outline for accessibility */
 }
 
+/* Section Liens sociaux */
 
+.social-media-section {
+  width: 60%; /* Controls the section width */
+  min-height: 40vh; /* Adjusted for a smaller minimum height */
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between items */
+  padding: 20px;
+  margin: 0px auto;
+}
+.social-media-header {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.social-media-links-gallery {
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
 
+.social-media-grid-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items in the grid */
+  justify-content: center; /* Vertically align content */
+  text-align: center; /* Center text */
+  border: 1px solid #ccc; /* Optional border to distinguish items */
+  padding: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
 
+.social-media-grid-item img {
+  width: 100%; /* Fixed size for uniformity */
+  height: auto; /* Fixed height for uniformity */
+  max-height: 200px;
+  object-fit: contain; /* Ensures full image is shown */
+  margin-bottom: 10px;
+}
 
+.link-description {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.social-media-grid-item:hover {
+  transform: scale(1.02)
+  font-size: 22px;
+}
+.social-media-grid-item:active {
+  transform: scale(1.04);
+}
 
 /* Footer */
 footer {

@@ -1,0 +1,263 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; /* Ensure body takes full height */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+header, footer {
+  width: 100%;
+  background-color: black;
+  font-family: Agdasima, sans-serif;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  font-size: 22px;
+  color: white;
+}
+
+.nav-menu li {
+  padding-right: 20px;
+  position: relative;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.2s;
+}
+
+.nav-menu a:hover {
+  background-color: rgb(64, 59, 59);
+  border-radius: 10px;
+}
+
+/* Dropdown styles */
+.dropdown-menu, .dropdown-connect-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  list-style-type: none;
+  padding: 5px;
+  margin: 0;
+  font-size: 22px;
+  width: 180px;
+  border-radius: 5px;
+}
+
+.dropdown-menu li, .dropdown-connect-menu li {
+  border-bottom: 1px solid #555;
+}
+
+.nav-menu li:hover .dropdown-menu, .connect-menu:hover .dropdown-connect-menu {
+  display: block; /* Show dropdowns on hover */
+}
+
+.main-section {
+  width: 100%;
+  background-image: url('images/background-image.png');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Section styles */
+.about-section, .news-section, .history-section, .characters-section {
+  width: 60%;
+  min-height: 70vh;
+  max-height: 80vh;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px auto;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.about-section, .news-section, .history-section, .characters-section {
+  gap: 20px;
+}
+
+.about-content-wrapper, .news-content-wrapper, .characters-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.about-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.heading, .news-header, .history-header, .characters-header {
+  margin-bottom: 20px;
+  font-size: 44px;
+  color: black;
+  text-align: center;
+}
+
+.subheading, .small-text, .year {
+  font-size: 26px;
+}
+
+.about-image, .news-container {
+  flex: 1;
+  max-width: 25%;
+}
+
+.about-image img, .news-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.discover-button {
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  width: 240px;
+  border: none;
+  border-radius: 100px;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.discover-button:hover {
+  background-color: rgb(48, 44, 44);
+  color: white;
+}
+
+/* History section specific styles */
+.gallery-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.gallery-nav label {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.history-gallery {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-images {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Control visibility of sets based on radio button selection */
+input[type='radio'] {
+  display: none;
+}
+
+/* Characters section styles */
+.characters-gallery {
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: center;
+}
+
+.character {
+  position: relative;
+  width: 80px; /* Set a fixed width */
+  height: 80px; /* Set a fixed height */
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.character img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character:hover,
+.character:focus {
+  transform: scale(1.1); /* Scale up on hover or focus */
+}
+
+.character:active {
+  transform: scale(1.5); /* Scale up to twice the size on click */
+}
+
+/* Description styles */
+.character-description {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  margin-top: 10px;
+}
+
+.character:hover + .character-description,
+.character:focus + .character-description {
+  display: block; /* Show description when character is focused or hovered */
+}
+
+/* Footer styles */
+footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.social-networks {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.social-network-button img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.rights-reserved {
+  color: white;
+  text-align: center;
+}

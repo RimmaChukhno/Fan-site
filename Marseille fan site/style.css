@@ -1,18 +1,21 @@
+/* Reset default styles */
 * {
   padding: 0;
   margin: 0;
 }
 
+/* Body styling */
 body {
   font-family: Roboto, sans-serif;
 }
 
+/* Header and Footer styling */
 header,
 footer {
   width: 100%;
   background-color: black;
   font-family: Agdasima, sans-serif;
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 header {
@@ -21,6 +24,7 @@ header {
   align-items: center;
 }
 
+/* Navigation Menu */
 .nav-menu {
   list-style-type: none;
   display: flex;
@@ -45,6 +49,7 @@ header {
   border-radius: 10px;
 }
 
+/* Dropdown Menu */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -74,6 +79,7 @@ header {
   display: block;
 }
 
+/* Connect Button Menu */
 .connect-menu {
   position: relative;
   display: inline-block;
@@ -121,33 +127,31 @@ header {
   display: flex;
 }
 
+/* Main Section */
 .main-section {
   width: 100%;
-  height: 100vw;
-  /*background delete*/
+  height: auto;
+  /* Adjust height if necessary */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 40px 20px 80px;
+  padding: 20px 40px 10px 40px;
+  flex: 1;
+  padding-bottom: 30px;
 }
 
+/* Footer styling */
 footer {
-  position: absolute;
+  position: relative;
+  /* Change to fixed.relative for sticky footer */
   bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-footer {
-  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
 }
 
-
+/* Social Networks */
 .social-networks {
   color: white;
   text-align: center;
@@ -181,10 +185,9 @@ footer {
   text-align: center;
 }
 
-/* Style des sections */
+/* About Section */
 .about-content {
   background: rgba(49, 175, 238, 0.8);
-  /* Прозрачный фон (0.8 - степень непрозрачности) */
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
@@ -193,24 +196,14 @@ footer {
   text-align: center;
 }
 
-/* Titres des sections */
+/* Section Titles */
 .h2 {
   color: #000000;
   text-align: center;
   font-size: 2em;
-
 }
 
-/* Titres principal */
-.h1 {
-  color: rgba(49, 175, 238, 0.8);
-  text-align: left;
-  font-size: 3em;
-  margin: 0;
-
-}
-
-/* mosaic */
+/* Mosaic Section */
 .mosaic {
   padding: 20px;
   text-align: center;
@@ -223,31 +216,228 @@ footer {
 .mosaic-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
+  gap: 5px;
+  /* Distance between photos */
+  margin-right: 3px;
 }
 
 .mosaic-item {
   margin: 10px;
   overflow: hidden;
   width: 110%;
-  /* Увеличивает ширину контейнера */
-  /* Cache les débordements lors de l'agrandissement */
+  /* Increases container width */
 }
 
 .mosaic-item img {
   width: 100%;
-  /* S'assure que l'image remplit le conteneur */
+  /* Ensures the image fills the container */
   height: 100%;
-  /* Ajuste la hauteur pour remplir le conteneur */
+  /* Adjusts height to fill the container */
   object-fit: cover;
-  /* Maintient le ratio d'aspect tout en remplissant le conteneur */
+  /* Maintains aspect ratio */
   border-radius: 8px;
-  /* Arrondit les coins de l'image */
+  /* Rounds image corners */
   transition: transform 0.3s;
-  /* Animation douce */
+  /* Smooth animation */
 }
 
 .mosaic-item:hover img {
   transform: scale(1.10);
-  /* Agrandit l'image à 110% lors du survol */
+  /* Enlarge image on hover */
+}
+
+/* Welcome Section */
+.bienvenue {
+  display: flex;
+}
+
+.text-container {
+  max-width: 600px;
+  /* Limit width for text */
+  margin-right: 20px;
+  /* Space between text and image */
+  align-items: left;
+  width: 60%;
+}
+
+.h1 {
+  color: rgba(49, 175, 238, 0.8);
+  text-align: left;
+  font-size: 3em;
+  margin: 30px 10px 30px 5px;
+  /* Margins */
+}
+
+.description {
+  font-size: 1.2em;
+  color: #333;
+  /* Description text color */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  /* Flexbox for image */
+  width: 40%;
+}
+
+img {
+  max-width: 100%;
+  /* Image adapts to width */
+  height: auto;
+  /* Maintains proportions */
+}
+
+/* photo-gallery */
+.photo-item {
+  position: relative;
+  text-align: center;
+  margin: 10px;
+  /* Space between photos */
+}
+
+.photo-gallery {
+  display: flex;
+  /* Use flexbox for layout */
+  flex-wrap: wrap;
+  /* Allow items to wrap to the next line if necessary */
+  justify-content: center;
+  /* Center items horizontally */
+}
+
+.photo-item {
+  margin: 10px;
+  /* Space between photo items */
+  text-align: center;
+  /* Center text below images */
+}
+
+.photo-item img {
+  width: 200px;
+  height: 220px;
+  border-radius: 50%;
+  /* Make photos circular */
+  object-fit: cover;
+  /* Crops image while maintaining aspect ratio */
+  transition: transform 0.3s ease;
+  /* Smooth transition for transformation */
+}
+
+.photo-item:hover img {
+  transform: translateY(-5px);
+  /* Move image up on hover */
+}
+
+.photo-description {
+  margin-top: 10px;
+  /* Space above text */
+  font-size: 16px;
+  /* Text size */
+  color: #333;
+  /* Text color */
+}
+
+/* Font Styles */
+.poppins-thin {
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Arrow Navigation */
+.produits-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Distributes arrows to the edges */
+  padding: 10px;
+  /* Padding around gallery */
+}
+
+.arrow {
+  font-size: 24px;
+  /* Arrow size */
+  cursor: pointer;
+  /* Pointer cursor */
+  padding: 10px;
+  /* Padding */
+  user-select: none;
+  /* Prevent text selection */
+}
+
+/* Mosaic Grid Transformations */
+.mosaic-grid {
+  display: flex;
+  overflow: hidden;
+  /* Hides elements that overflow */
+  transition: transform 0.3s ease;
+  /* Smooth transition */
+  position: relative;
+  /* For using transform */
+}
+
+/* Radio Button Hiding */
+input[type="radio"] {
+  display: none;
+  /* Hide radio buttons */
+}
+
+/* Show selected mosaic item */
+#item1:checked~.mosaic-grid .mosaic-item[data-for="item1"],
+#item2:checked~.mosaic-grid .mosaic-item[data-for="item2"],
+#item3:checked~.mosaic-grid .mosaic-item[data-for="item3"],
+#item4:checked~.mosaic-grid .mosaic-item[data-for="item4"],
+#item5:checked~.mosaic-grid .mosaic-item[data-for="item5"] {
+  display: block;
+  /* Show only selected item */
+}
+
+/* Manage selected item offset */
+.mosaic-grid {
+  transform: translateX(calc(-100% * (var(--selected) - 1)));
+}
+
+/* Set variable to shift items */
+#item1:checked~.mosaic-grid {
+  --selected: 1;
+}
+
+#item2:checked~.mosaic-grid {
+  --selected: 2;
+}
+
+#item3:checked~.mosaic-grid {
+  --selected: 3;
+}
+
+#item4:checked~.mosaic-grid {
+  --selected: 4;
+}
+
+#item5:checked~.mosaic-grid {
+  --selected: 5;
+}
+
+.text {
+  text-align: center;
+  font-size: 20px;
+  /* taille de text */
+  margin: 10px 10px 0 10px;
+}
+
+body {
+  max-width: auto;
+  /* Максимальная ширина */
+  margin: 0 auto;
+  /* Центрирование */
+  padding: 0 1px;
+  /* Отступы */
+}
+
+
+* {
+  box-sizing: border-box;
+  /* Учитывать padding и border */
 }

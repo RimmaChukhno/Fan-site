@@ -570,3 +570,114 @@ footer {
   color: white;
   text-align: center;
 }
+
+/* Media-queries pour adapter la page aux petits écrans (jusqu'à 1024 px et jusqu'à 768px):
+
+/* Ecran tablette */
+@media (max-width: 1024px) and (min-width: 768px) {
+  
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+  .nav-menu {
+    font-size: 18px;
+  }
+  .connect-button {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  
+  .main-section {
+    padding: 15px 30px;
+  }
+  .about-section,
+  .news-section,
+  .history-section,
+  .characters-section,
+  .social-media-section {
+    width: 80%;
+  }
+  .about-content-wrapper {
+    flex-direction: column;
+  }
+  .about-content, .about-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .gallery-item {
+    width: 45%; 
+  }
+
+  .character {
+    width: 150px;
+    height: 150px;
+  }
+  .social-media-links-gallery {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+/* Media query pour les écrans plus petits que 768px) */
+@media (max-width: 768px) {
+  
+  body {
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-menu, .dropdown-menu, .dropdown-connect-menu {
+    font-size: 16px;
+  }
+  .connect-button {
+    font-size: 16px;
+    width: auto;
+  }
+
+  .main-section {
+    padding: 10px;
+  }
+
+  .about-section,
+  .news-section,
+  .history-section,
+  .characters-section,
+  .social-media-section {
+    width: 90%;
+  }
+
+  .about-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-content, .about-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .gallery-item {
+    width: 100%; 
+    margin: 5px 0;
+  }
+  .character {
+    width: 120px;
+    height: 120px;
+  }
+
+  .social-media-links-gallery {
+    grid-template-columns: 1fr; 
+  }
+
+  .social-networks {
+    font-size: 18px;
+  }
+  .rights-reserved {
+    font-size: 16px;
+  }
+}

@@ -4,18 +4,24 @@ html, body {
   width: 100%;
 }
 body {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+/* Header section */
 header,
 footer {
   width: 100%;
+  position: relative;
   background-color: black;
-  font-family: Agdasima, sans-serif;
+  font-family: "Agdasima", sans-serif;
+  left: 50%;
+  right: 50%;
+  margin-right: -50vw;
+  margin-left: -50vw;
   padding: 20px;
 }
 header {
@@ -47,7 +53,7 @@ header {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 0%;
   background-color: #333;
   list-style-type: none;
   padding: 5px;
@@ -108,6 +114,8 @@ header {
 .connect-menu:hover .dropdown-connect-menu {
   display: flex;
 }
+
+/* Section Main */
 .main-section {
   width: 100%;
   background-image: url('images/background-image.png');
@@ -209,7 +217,7 @@ header {
 .news-header {
   font-size: 44px;
   color: black;
-  text-align: left;
+  text-align: center;
 }
 .news-content-wrapper {
   display: flex;
@@ -383,6 +391,146 @@ input[type='radio'] {
 
 input[type="radio"]:checked + label {
   background-color: darkgrey; /* Color for active state */
+}
+
+/* Section Personnages contenant une gallerie mosaique d'images et une description */
+.characters-section {
+  width: 60%;
+  min-height: 50vw; /* Ensure the section has a minimum height */
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  overflow: visible; /* Prevent overflow */
+}
+
+.characters-header {
+  font-size: 44px;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.characters-gallery {
+  display: flex; /* Keep flex to align horizontally */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between characters */
+}
+
+.character {
+  position: relative;
+  width: 200px; /* Set a fixed width */
+  height: 200px; /* Set a fixed height */
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.character img {
+  width: 100%; /* Ensure the image takes full width of the container */
+  height: 100%; /* Ensure the image takes full height of the container */
+  object-fit: contain; /* Cover to maintain aspect ratio */
+}
+
+.character:hover,
+.character:focus {
+  transform: scale(1.1); /* Scale up on hover or focus */
+}
+
+.character:active {
+  transform: scale(2); /* Scale up to twice the size on click */
+}
+
+.character-description {
+  display: none; /* Initially hidden */
+  position: absolute; /* Position absolutely within the character */
+  bottom: 10px; /* Adjust position as needed */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  text-align: center;
+  font-size: 10px;
+  color: black;
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: background for better visibility */
+  border-radius: 5px; /* Optional: rounded corners */
+  padding: 5px; /* Optional: padding for better appearance */
+}
+
+.character:hover .character-description,
+.character:focus .character-description {
+  display: block; /* Show description when character is hovered or focused */
+}
+
+
+/* Optional: Highlight active character */
+.character:focus {
+  outline: 2px solid blue; /* Outline for accessibility */
+}
+
+/* Section Liens sociaux */
+
+.social-media-section {
+  width: 60%; /* Controls the section width */
+  min-height: 40vh; /* Adjusted for a smaller minimum height */
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between items */
+  padding: 20px;
+  margin: 0px auto;
+}
+.social-media-header {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.social-media-links-gallery {
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.social-media-grid-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items in the grid */
+  justify-content: center; /* Vertically align content */
+  text-align: center; /* Center text */
+  border: 1px solid #ccc; /* Optional border to distinguish items */
+  padding: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.social-media-grid-item img {
+  width: 100%; /* Fixed size for uniformity */
+  height: auto; /* Fixed height for uniformity */
+  max-height: 200px;
+  object-fit: contain; /* Ensures full image is shown */
+  margin-bottom: 10px;
+}
+
+.link-description {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.social-media-grid-item:hover {
+  transform: scale(1.02);
+  font-size: 22px;
+}
+.social-media-grid-item:active {
+  transform: scale(1.04);
 }
 
 /* Footer */

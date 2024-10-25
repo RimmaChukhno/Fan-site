@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Page de connexion
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="fansite_connexion.css">
+</head>
+<body>
+
+  <!--Header section-->
+  <header>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#Accueil">Accueil</a></li>
+
+        <li class="dropdown">
+          <a href="#super-mario">Super Mario Fan Site</a>
+          <ul class="dropdown-menu">
+            <li><a href="#about">A Propos</a></li>
+            <li><a href="#news">Actualités</a></li>
+            <li><a href="history">Histoire</a></li>
+            <li><a href="#characters">Personnages</a></li>
+            <li><a href="#products">Jeux</a></li>
+            <li><a href="#resources">Liens</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#ville-marseille">Ville de Marseille Fan site</a>
+          <ul class="dropdown-menu">
+            <li><a href="#about">A Propos</a></li>
+            <li><a href="#news">Actualités</a></li>
+            <li><a href="history">Histoire</a></li>
+            <li><a href="#characters">Personnages</a></li>
+            <li><a href="#products">Produits</a></li>
+            <li><a href="#resources">Liens</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+    
+    <section class="connect-menu">
+      <button class="connect-button">Connexion</button>
+      <ul class="dropdown-connect-menu">
+        <li><a href="#login">Log in</a></li>
+        <li><a href="#signup">S'inscrire</a></li>
+      </ul>
+    </section>
+
+  </header>
+
+  
+  <main class="connection-page">
+    <section class="log-in-section">
+      <h2>Connexion</h2>
+      <form>
+        <label for="login-username">Votre nom d'utilisateur ou votre e-mail</label>
+        <input type="text" id="login-username" name="username" required>
+
+        <label for="login-password">Mot de passe</label>
+        <div class="password-field">
+          <input type="text" id="login-password" name="password" required>
+          <button type="button" class="show-password">
+            <span class="eye-icon">👁️</span>Montrer
+          </button>
+        </div>
+        <a href="#" class="forgot-password">Mot de passe oublié?</a>
+
+        <label>
+          <input type="checkbox" name="stay-connected">Rester connecté
+        </label>
+
+        <button type="submit">Se connecter</button>
+      </form>
+    </section>
+
+    <section class="register-section">
+      <h2>S'enregistrer</h2>
+      <form>
+
+        <label for="register-username">Nom d'utilisateur<span class="required">*Champ requis</span></label>
+        <input type="text" id="register-username" name="username" required>
+
+        <label for="register-email">E-mail<span class="required">*Champ requis</span></label>
+        <input type="email" id="register-email" name="email" required>
+
+        <label for="password">Mot de passe<span class="required">*Champ requis</span></label>
+        <input type="password" id="register-password" name="password" required>
+
+        <label for="register-birthday">Date de naissance<span class="required">*Champ requis</span></label>
+        <input type="date" id="register-birthday" name="birthday" required>
+
+        <label for="register-verification">Vérification<span class="required">*Champ requis</span></label>
+        <input type="text" id="register-verification" name="verification" required>
+
+        <label>
+          <input type="checkbox" name="accept-terms">J'accepte la politique générale et les politiques de confidentialités
+        </label>
+
+        <button type="submit">S'entregistrer</button>
+
+      </form>
+
+    </section>
+  </main>
+
+  <!--Footer-->
+  <footer>
+      
+    <section class="social-networks">
+     <h2>Nos réseaux sociaux:</h2>
+    </section>
+
+    <section class="social-networks-menu">
+
+     <a href="facebook.com/fanszone.html" class="social-network-button">
+       <img src="images/facebook-logo.png" alt="Facebook Logo">
+     </a>
+
+     <a href="twitter.com/fanzone.html" class="social-network-button">
+       <img src="images/twitter-logo-footer.png" alt="Twitter Logo">
+     </a>
+
+     <a href="instagram.com/fanszone.html" class="social-network-button">
+       <img src="images/instagram-logo.png" alt="Instagram Logo">
+     </a>
+
+     <a href="youtube.com/fanzone.html" class="social-network-button">
+       <img src="images/youtube-logo.png" alt="Youtube Logo">
+     </a>
+     
+    </section>
+
+    <section class="rights-reserved">
+     <p>2024. Tous les droits réservés</p>
+    </section>
+
+ </footer>
+</body>

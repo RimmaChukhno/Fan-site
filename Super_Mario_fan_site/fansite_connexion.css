@@ -4,6 +4,7 @@ html, body {
   width: 100%;
 }
 body {
+  height: 100%;
   font-family: Roboto, sans-serif;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -11,11 +12,14 @@ body {
   flex-direction: column;
   height: 100%;
 }
+
+
+/* Header section */
 header,
 footer {
   width: 100%;
   background-color: black;
-  font-family: Agdasima, sans-serif;
+  font-family: "Agdasima", sans-serif;
   padding: 20px;
 }
 header {
@@ -76,7 +80,7 @@ header {
   background-color: transparent;
   color: white;
   font-size: 22px;
-  font-family: Agdasima;
+  font-family: "Agdasima";
   padding: 15px;
   border: none;
   cursor: pointer;
@@ -85,12 +89,13 @@ header {
 .dropdown-connect-menu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 20%;
+  top: 50%;
+  left: 0;
   font-size: 18px;
   background-color: #333;
   list-style-type: none;
   border-radius: 5px;
+  text-align: right;
 }
 .dropdown-connect-menu li {
   padding: 10px;
@@ -108,105 +113,106 @@ header {
 .connect-menu:hover .dropdown-connect-menu {
   display: flex;
 }
-.main-section {
-  width: 100%;
-  background-image: url('images/background-image.png');
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 40px 20px 80px;
-}
-/* Section About */
 
-.about-section {
-  width: 60%;
-  min-height: 70vh;
-  max-height: 80vh;
-  background-color: transparent;
+
+/* Main section */
+
+.connection-page {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px;
-  gap: 20px;
-  border: none;
-  overflow: hidden;
-  margin-bottom: 20px;
+  background-color: #f5f5f5;
 }
-.about-content-wrapper {
+
+.login-section, .register-section {
+  width: 45%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+}
+
+form {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
+  flex-direction: column;
 }
-.about-content {
-  flex: 1;
-  max-width: 50%;
-}
-.heading {
-  margin-bottom: 20px;
-}
-.subheading {
-  font-size: 44px;
-  display: block;
-}
-.main-heading {
-  font-size: 72px;
-  margin: 0;
+
+label {
   font-weight: bold;
+  margin-top: 10px;
 }
-.small-text {
-  font-size: 26px;
-  line-height: 1.4;
+
+.required {
+  font-size: 0.8em;
+  color: #f00;
+  margin-left: 5px;
 }
-.about-image {
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.password-field {
+  display: inline-flex;
+  align-items: center;
+}
+
+.password-field input[type="password"] {
   flex: 1;
-  max-width: 25%;
 }
-.about-image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-.discover-button {
-  background-color: white;
-  color: black;
-  padding: 10px 15px;
-  width: 240px;
-  height: auto;
+
+.show-password {
+  background: none;
   border: none;
-  border-radius: 100px;
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: bolder;
   cursor: pointer;
-  display: inline-block;
-  align-self: center;
-  text-align: center;
-  justify-content: center;
+  padding: 5px 8px;
+}
+.eye-icon {
+  font-size: 1em;
+  margin-right: 5px;
+  vertical-align: middle;
+
 }
 
-.discover-button:hover {
-  background-color: rgb(48, 44, 44);
-  color: white;
+.forgot-password {
+  font-size: 0.9em;
+  color: #007BFF;
+  margin-top: 5px;
+  cursor: pointer;
 }
-/* Footer section */
 
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button[type="submit"] {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* Footer */
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-footer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+.social-networks h2 {
+  color: white;
 }
 .social-networks {
   color: white;

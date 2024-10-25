@@ -42,7 +42,7 @@ header {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -20;
   margin-top: 20px;
   background-color: #333;
   list-style-type: none;
@@ -84,8 +84,8 @@ header {
 .dropdown-connect-menu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 75%;
+  left: 20%;
   font-size: 18px;
   background-color: #333;
   list-style-type: none;

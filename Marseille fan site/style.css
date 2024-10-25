@@ -7,6 +7,9 @@
 /* Body styling */
 body {
   font-family: Roboto, sans-serif;
+  max-width: auto;
+  margin: 0 auto;
+  padding: 0 1px;
 }
 
 /* Header and Footer styling */
@@ -427,17 +430,26 @@ input[type="radio"] {
   margin: 10px 10px 0 10px;
 }
 
-body {
-  max-width: auto;
-  /* Максимальная ширина */
-  margin: 0 auto;
-  /* Центрирование */
-  padding: 0 1px;
-  /* Отступы */
-}
 
+/*button lien */
 
 * {
   box-sizing: border-box;
-  /* Учитывать padding и border */
+  /*padding et border */
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: black;
+  /* color */
+  background-color: transparent;
+  /* fond transparent */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:active {
+  color: blue;
+  /* Couleur du texte lorsque vous appuyez dessus */
 }
